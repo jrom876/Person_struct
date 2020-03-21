@@ -14,7 +14,12 @@ To run make-test on the linux command line, use these commands:
 
 checkmk personExample-test.check >personExample-test.c
 
-make -f make-test.mk test
+make -f make-test.mk pstest
+
+or
+
+make -f make-test.mk chtest
+//=====================
 
 To update all dependencies, use:
 
@@ -23,4 +28,4 @@ make -f make.mk
 or 
 
 make -f make.mk main
-
+//=====================
