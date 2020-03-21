@@ -1,0 +1,17 @@
+#include "arrStructExample.h"
+
+struct Person
+{
+    char name[20];
+    char subject[20];
+    char grade;
+    int id;
+    short int age;
+};
+
+#test personstruct
+    struct Person me;
+    strcpy(&me, Steve());
+    fail_unless(strcmp(me.name, "Steve"), "Wrong Name");
+
+    fail_if(strcmp(me.name, "Steve"), "Right Name");

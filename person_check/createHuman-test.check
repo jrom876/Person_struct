@@ -1,0 +1,24 @@
+#include "personExample.h"
+
+// checkmk createHuman-test.check >createHuman-test.c
+// make -f make-test.mk chtest
+
+struct Person
+{
+    char name[20];
+    char subject[20];
+    char grade;
+    int id;
+    short int age;
+};
+
+#test pstruct
+for (int j = 0; j < sizeof(int); j++)
+{
+  for (int i =0; i < sizeof(short int); i++)
+  {
+    struct Person me = createHuman("S","A",'A',j+1,i+1);
+    fail_if(strcmp(me.name, "S"), "Wrong Name pstruct");
+    fail_unless(strcmp(me.name, "Yari"), "Right Name pstruct");
+  }
+}

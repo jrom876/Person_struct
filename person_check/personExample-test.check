@@ -1,0 +1,29 @@
+#include "personExample.h"
+
+struct Person
+{
+    char name[20];
+    char subject[20];
+    char grade;
+    int id;
+    short int age;
+};
+
+//#test pstruct
+//for (int j = 0; j < sizeof(int); j++)
+//{
+//  for (int i =0; i < sizeof(short int); i++)
+//  {
+//    struct Person me = createHuman("S","A",'A',j+1,i+1);
+//    fail_if(strcmp(me.name, "S"), "Wrong name Name pstruct");
+//    fail_unless(strcmp(me.name, "Yari"), "Right Name pstruct");
+//  }
+//}
+#test personstruct
+    struct Person me = createPerson();
+    fail_if(!strcmp(me.name, "Steve"), "Right Name");
+    fail_unless(!strcmp(me.name, "Yari"), "Right Name");
+
+#test createPerson1
+    struct Person he_man = createPerson();
+    fail_unless(!strcmp(he_man.name, "Yari"), "Not the same name");
