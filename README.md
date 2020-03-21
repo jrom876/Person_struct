@@ -3,7 +3,7 @@ Person_check
 
 This repository is a Person structure with a C Unit automated test framework.
 
-Its data structure and basic functionality is defined in personExample.c and personExample.h. 
+Its data structure and basic functionality are defined in personExample.c and personExample.h. 
 
 The createHuman branch is used to develop and test new features such as passwords.
 
