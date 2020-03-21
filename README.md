@@ -19,7 +19,6 @@ make -f make-test.mk pstest
 or
 
 make -f make-test.mk chtest
-//=====================
 
 To update all dependencies, use:
 
@@ -28,4 +27,3 @@ make -f make.mk
 or 
 
 make -f make.mk main
-//=====================
