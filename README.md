@@ -10,7 +10,7 @@ The createHuman branch is used to develop and test new features such as password
 It has two make files, make.mk and make-test.mk. The make.mk version updates all dependencies in the main directory, 
 while the make-test.mk version creates executable automated tests which immediately run on the command line. 
 
-To run make-test, use these commands:
+To run make-test on the linux command line, use these commands:
 
 checkmk personExample-test.check >personExample-test.c
 
