@@ -3,7 +3,13 @@ Person_check
 
 This repository is a Person structure with a C Unit automated test framework.
 
-Please also see: https://github.com/jrom876/TestPerson for an ongiong python version of this program.
+This project started as an interview programming challenge from a potential employer 
+who gave me an hour to create a person struct program in C which could also 
+convert all class attributes to bytecode, and then write the python version for extra credit.
+
+See https://github.com/jrom876/arrStructExample/arrStructExample.c for the early C version.
+
+Please also see: https://github.com/jrom876/TestPerson for the ongiong python version of this project.
 
 Its data structure and basic functionality are defined in personExample.c and personExample.h. 
 
