@@ -3,7 +3,7 @@ Person_check
 
 This repository is a Person structure with a C Unit automated test framework.
 
-Please also see: https://github.com/jrom876/Person_check for an ongiong python version of this program.
+Please also see: https://github.com/jrom876/TestPerson for an ongiong python version of this program.
 
 Its data structure and basic functionality are defined in personExample.c and personExample.h. 
 
