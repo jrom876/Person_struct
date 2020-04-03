@@ -6,8 +6,7 @@ who gave me an hour to create a struct program in C with at least one string, on
 which would also convert all outputs to bytecode, and then write the python version for extra credit. 
 
 This is similar to the classic struct person program that every computer science student has done 
-at one time or another. So, just for kicks, I later expanded their requirements to include both C and python 
-versions of a robust .txt object to sql converter, and started this project.
+at one time or another. So wrote the first struct Person program, then later expanded their requirements to include both C and python versions of a robust .txt object to sql converter, and started this project.
 
 Since then (about a month ago as of this writing), the C version has evolved into a Person/array structure 
 with nascent text to sql conversion code and a C Unit automated test framework. I am currently working on the sql 
