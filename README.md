@@ -10,7 +10,8 @@ at one time or another. So, just for kicks, I later expanded their requirements 
 versions of a robust .txt object to sql converter, and started this project.
 
 Since then (about a month ago as of this writing), the C version has evolved into a Person/array structure 
-with nascent text to sql conversion code and a C Unit automated test framework. I am currently writing its sql interface.
+with nascent text to sql conversion code and a C Unit automated test framework. I am currently working on the sql 
+conversion code.
 
 See: https://github.com/jrom876/TestPerson for the python version of this project.
 
