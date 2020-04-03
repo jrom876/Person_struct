@@ -6,32 +6,122 @@
 #include <check.h>
 
 #line 1 "createHuman-test.check"
-#include "personExample.h"
+// createHuman-test.check
 
-// checkmk createHuman-test.check >createHuman-test.c
-// make -f make-test.mk chtest
+#include "createHuman.h"
+
+//// To generate and run test code automatically,
+//// run the following commands on the linux command line.
+//// checkmk createHuman-test.check >createHuman-test.c
+//// make -f make-test.mk chtest
+//
 
 struct Person
 {
-    char name[20];
-    char subject[20];
+    char fname[20];
+    char lname[20];
+    char pw[20];
     char grade;
     int id;
-    short int age;
+    int age;
 };
 
-START_TEST(pstruct)
-{
-#line 16
-for (int j = 0; j < sizeof(int); j++)
-{
-  for (int i =0; i < sizeof(short int); i++)
-  {
-    struct Person me = createHuman("S","A",'A',j+1,i+1);
-    fail_if(strcmp(me.name, "S"), "Wrong Name pstruct");
-    fail_unless(strcmp(me.name, "Yari"), "Right Name pstruct");
-  }
+char* itoa(int value, char* result, int base) {
+    // check that the base if valid
+    if (base < 2 || base > 36) { *result = '\0'; return result; }
+
+    char* ptr = result, *ptr1 = result, tmp_char;
+    int tmp_value;
+
+    do {
+        tmp_value = value;
+        value /= base;
+        *ptr++ = "zyxwvutsrqponmlkjihgfedcba9876543210123456789abcdefghijklmnopqrstuvwxyz" [35 + (tmp_value - value * base)];
+    } while ( value );
+
+    // Apply negative sign
+    if (tmp_value < 0) *ptr++ = '-';
+    *ptr-- = '\0';
+    while(ptr1 < ptr) {
+        tmp_char = *ptr;
+        *ptr--= *ptr1;
+        *ptr1++ = tmp_char;
+    }
+    return result;
 }
+
+//#test chstruct
+//for (int j = 0; j < sizeof(int); j++)
+//{
+//  for (int i =0; i < sizeof(int); i++)
+//  {
+//    struct Person me = createHuman("S","A","y",'A',j+1,i+1);
+//    fail_if(strcmp(me.fname, "S"), "Wrong Name pstruct");
+//    fail_unless(strcmp(me.fname, "Yari"), "Right Name pstruct");
+//  }
+//}
+
+START_TEST(loop1)
+{
+#line 57
+int runThis(void){
+  //FILE *fp = fopen("test.txt", "a");
+  //const int arrSize = 20;
+  //char firstname[20] = {0};
+  //char lastname[20] = {0};
+  char password[20] = {0};
+  char grade = ' ';
+  int id = 0;
+  int age = 0;
+  for(int z = 65; z < 70; z++){
+    char firstname[20] = {0};
+    char lastname[20] = {0};
+    //char password[20] = {0};
+    char fn = (char) z;
+    char ln = (char) z+32;
+    char pw = (char) z+11;
+    for(int k = 0; k < 3; k++){
+      //itoa(z, firstname, 10);
+      firstname[k] = fn;
+      lastname[k] = ln;
+      password[k] = pw;
+      grade = fn;
+      id = z;
+      age = k+21;
+      struct Person me = createHuman(firstname,lastname,password,grade,id,age);
+      //convHuman2bytecode(me);
+      fail_if(!strcmp(me.fname, "EZ"), "Matched First Name in loop1 test");
+      fail_if(!strcmp(me.lname, "LN"), "Matched Last Name in loop1 test");
+      fail_if(!strcmp(me.pw, "PN"), "Matched Password in loop1 test");
+      //printf("%d = %c\n", z,z);
+    }
+  }
+  //printf("%d = %c\n", 127,127);
+  return 0;
+}
+runThis();
+
+
+//#test loop2
+//int runThat(void){
+//  FILE *fp = fopen("test.txt", "r");
+//  if (fp == NULL) return -1;
+//  for(char z = 65; z < 91; z++){
+//    char *nam=(char*)malloc(sizeof(nam));
+//    memcpy(nam,(const unsigned char*)&nam,sizeof(nam));
+//    nam = fgets(nam, sizeof(char),stdin);
+//    struct Person me = createHuman(nam,"A","y",'A',z,z);
+//    free(nam);
+
+
+//  //struct Person me = createHuman((char*)z,(char*)z,(char*)z,'A',127,127);
+//    fail_if(!strcmp(me.fname, "S"), "Wrong Name pstruct");
+//    //printf("%d = %c\n", z,z);
+//  }
+//  //printf("%d = %c\n", 127,127);
+//  return 0;
+//}
+//runThat();
 }
 END_TEST
 
@@ -43,7 +133,7 @@ int main(void)
     int nf;
 
     suite_add_tcase(s1, tc1_1);
-    tcase_add_test(tc1_1, pstruct);
+    tcase_add_test(tc1_1, loop1);
 
     srunner_run_all(sr, CK_ENV);
     nf = srunner_ntests_failed(sr);
