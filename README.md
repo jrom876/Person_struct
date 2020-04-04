@@ -11,8 +11,7 @@ requirements to include both C and python versions of a robust .txt object to sq
 That is the genesis of this project.
 
 Since then (about a month ago as of this writing), the C version has evolved into a Person/array structure 
-with a C Unit automated test framework, and the beginnings of a text to sql converter. 
-I am currently developing the sql converter.
+with C Unit automated tests and the beginnings of a text to sql converter. 
 
 See: https://github.com/jrom876/TestPerson for the python version of this project.
 
