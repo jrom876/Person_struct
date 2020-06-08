@@ -17,16 +17,7 @@ See: https://github.com/jrom876/TestPerson for the python version of this projec
 
 Person_check has two make files: make.mk and make-test.mk. 
 
-The make.mk version updates all dependencies in the main directory, 
-
-while the make-test.mk version creates executable automated tests 
-which immediately run on the command line. 
-
-To run make-test on the linux command line, use these commands:
-
-checkmk createHuman-test.check >createHuman-test.c
-
-make -f make-test.mk chtest
+The make.mk version updates all dependencies in the main directory. 
 
 To update all dependencies, use:
 
@@ -35,3 +26,13 @@ make -f make.mk
 or 
 
 make -f make.mk main
+
+
+The make-test.mk version creates executable automated tests which immediately run on the command line. 
+
+To run make-test on the linux command line, use:
+
+checkmk createHuman-test.check >createHuman-test.c
+
+make -f make-test.mk chtest
+
