@@ -2,7 +2,7 @@
 Person_struct
 
 This project started as an interview programming challenge from a potential employer 
-who gave me an hour to create a program in C that creates a struct with at least one string, one char, one int, and one short int
+who gave me an hour to write and test a program in C that creates a struct with at least one string, one char, one int, and one short int
 which would also convert all outputs to bytecode, and then write the python version for extra credit. 
 
 This is similar to the classic struct person program that every computer science student has done 
