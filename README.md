@@ -1,5 +1,5 @@
-# Person_check
-Person_check
+# Person_struct
+Person_struct
 
 This project started as an interview programming challenge from a potential employer 
 who gave me an hour to create a struct program in C with at least one string, one char, one int, and one short int
