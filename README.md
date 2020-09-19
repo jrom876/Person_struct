@@ -15,7 +15,7 @@ That is the genesis of this project.
 Since then the C version has evolved into a Person/array structure 
 with C Unit automated tests and the beginnings of a text object to sql converter. 
 
-See: https://github.com/jrom876/TestPerson for the python version of this project.
+See: https://github.com/jrom876/Test_Person for the python version of this project.
 
 Person_check has two make files: make.mk and make-test.mk. 
 
