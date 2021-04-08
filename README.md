@@ -8,10 +8,6 @@ which would also convert all outputs to bytecode, and then write the python vers
 This is similar to the classic struct person program that every computer science student has done 
 at one time or another. 
 
-So I wrote and tested the first part of this program right then in 48 minutes, and it worked so well that I later expanded the requirements to include both C and python versions of a text object to sql converter. 
-
-That is the genesis of this project.
-
 Since then the C version has evolved into a Person/array structure 
 with C Unit automated tests and the beginnings of a text object to sql converter. 
 
