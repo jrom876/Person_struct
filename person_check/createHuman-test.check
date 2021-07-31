@@ -1,6 +1,6 @@
 // createHuman-test.check
 
-#include "createHuman.h"
+#include "createHuman.c"
 
 //// To generate and run test code automatically,
 //// run the following commands on the linux command line.
